@@ -1,37 +1,102 @@
-@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Merienda:wght@700&family=Pacifico&display=swap");
+
 body {
   margin: 0;
-  background: #7ecae1;
+  /* background: #7ecae1; */
+  font-family: "Merienda", cursive;
+  background-image: url("./notes-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  /* color: #000; */
+  color: #fff;
 }
 #app {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, 235px);
   padding: 24px;
-  gap: 24px;
+  gap: 26px;
+  justify-content: center;
 }
 
 .note {
-  height: 200px;
+  height: 235px;
   box-sizing: border-box;
   padding: 16px;
   border: none;
+  outline: none;
   border-radius: 10px;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
   resize: none;
   font-family: "Balsamiq Sans", cursive;
-  font-size: 16px;
+  font-size: 18px;
+  background: #fd8ec0;
+  transition: all ease 0.3s;
+  transform: rotate(-6deg);
+  margin-top: 6px;
+  overflow-y: hidden;
+}
+.note:nth-child(even) {
+  background: #feff9c;
+  transform: rotate(4deg);
+  position: relative;
+  top: 5px;
+}
+.note:nth-child(3n) {
+  background: #7afcff;
+  transform: rotate(-5deg);
+  position: relative;
+  top: -5px;
+}
+.note:hover,
+.note.note--focused {
+  transform: scale(1.1);
+  z-index: 5;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .add-note {
-  height: 200px;
+  height: 235px;
   border: none;
   outline: none;
-  background: rgba(0, 0, 0, 0.1);
+  /* background: rgba(0, 0, 0, 0.4); */
+  background: rgba(253, 253, 253, 0.4);
   border-radius: 10px;
   font-size: 120px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 1);
+  /* color: #fff; */
   cursor: pointer;
   transition: background 0.2s;
 }
 .add-note:hover {
   background: rgba(0, 0, 0, 0.2);
 }
+/* @media (max-width: 1200px) {
+  #app {
+    grid-template-columns: repeat(auto-fill, 160px);
+    justify-content: center;
+  }
+  .note {
+    height: 160px;
+    padding: 10px;
+  }
+  .add-note {
+    height: 160px;
+  }
+}
+@media (max-width: 1400px) {
+  #app {
+    grid-template-columns: repeat(auto-fill, 210px);
+  }
+  .note {
+    height: 210px;
+    padding: 10px;
+  }
+  .add-note {
+    height: 210px;
+  }
+} */
