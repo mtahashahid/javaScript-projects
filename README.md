@@ -1,6 +1,7 @@
 # javaScript-projects
 
-Project # 01 : Sticky Notes
+**Project # 01 : Sticky Notes**
+
 Sticky notes developed with HTML5,CSS3 and JavaScript. Saving notes to the localstorage.
 
 Live Link: [Sticky Notes](https://stickynotesforyou.netlify.app/)
